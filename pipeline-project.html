@@ -1,0 +1,196 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f9ff"/>
+      <stop offset="100%" style="stop-color:#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="audioGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#1e40af"/>
+    </linearGradient>
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="outputGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#d97706"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+  
+  <!-- Title -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1f2937">
+    Pipeline de Détection de Frustration - Call Center AI
+  </text>
+  
+  <!-- Step 1: Audio Input & Processing -->
+  <g id="step1">
+    <rect x="50" y="80" width="200" height="120" rx="15" fill="url(#audioGradient)" filter="url(#shadow)"/>
+    <text x="150" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Étape 1: Audio Input</text>
+    <text x="150" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Input: audio.mp3</text>
+    <text x="150" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">FFMPEG (cleaning)</text>
+    <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Whisper (Speech-to-Text)</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <polygon points="260,140 290,140 280,125 300,140 280,155" fill="#374151"/>
+  
+  <!-- Step 2: Data Modeling -->
+  <g id="step2">
+    <rect x="310" y="80" width="200" height="120" rx="15" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="410" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Étape 2: Data Modeling</text>
+    <text x="410" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Structure des données</text>
+    <text x="410" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Format JSON</text>
+    <text x="410" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Historique client</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <polygon points="520,140 550,140 540,125 560,140 540,155" fill="#374151"/>
+  
+  <!-- Step 3a: T5 QA Model -->
+  <g id="step3a">
+    <rect x="570" y="30" width="180" height="100" rx="15" fill="url(#aiGradient)" filter="url(#shadow)"/>
+    <text x="660" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Modèle Q&A</text>
+    <text x="660" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">T5 Model</text>
+    <text x="660" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Context Call Center</text>
+  </g>
+  
+  <!-- Step 3b: BERT Sentiment -->
+  <g id="step3b">
+    <rect x="570" y="150" width="180" height="100" rx="15" fill="url(#aiGradient)" filter="url(#shadow)"/>
+    <text x="660" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Sentiment Analysis</text>
+    <text x="660" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">BERT Model</text>
+    <text x="660" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Détection Frustration</text>
+  </g>
+  
+  <!-- Arrow from step2 to step3a -->
+  <polygon points="560,120 570,110 585,110 575,95 595,110 575,125" fill="#374151"/>
+  
+  <!-- Arrow from step2 to step3b -->
+  <polygon points="560,160 570,170 585,170 575,155 595,170 575,185" fill="#374151"/>
+  
+  <!-- Arrows from step3 to step4 -->
+  <polygon points="760,80 790,80 780,65 800,80 780,95" fill="#374151"/>
+  <polygon points="760,200 790,200 780,185 800,200 780,215" fill="#374151"/>
+  
+  <!-- Step 4: Results Integration -->
+  <g id="step4">
+    <rect x="810" y="100" width="180" height="120" rx="15" fill="url(#outputGradient)" filter="url(#shadow)"/>
+    <text x="900" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Intégration Résultats</text>
+    <text x="900" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Résumé conversation</text>
+    <text x="900" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">État émotionnel</text>
+    <text x="900" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">Suggestions d'action</text>
+  </g>
+  
+  <!-- Technologies Used Section -->
+  <g id="technologies">
+    <rect x="50" y="300" width="1100" height="450" rx="20" fill="white" stroke="#e5e7eb" stroke-width="2" filter="url(#shadow)"/>
+    <text x="600" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1f2937">
+      Technologies Utilisées
+    </text>
+    
+    <!-- Audio Processing -->
+    <g id="tech-audio">
+      <rect x="80" y="370" width="240" height="150" rx="10" fill="#f8fafc" stroke="#3b82f6" stroke-width="2"/>
+      <text x="200" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#3b82f6">
+        Audio Processing
+      </text>
+      <text x="200" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • OpenAI Whisper
+      </text>
+      <text x="200" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • FFMPEG
+      </text>
+      <text x="200" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Python Audio Libraries
+      </text>
+      <text x="200" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Speech Recognition
+      </text>
+    </g>
+    
+    <!-- Data Processing -->
+    <g id="tech-data">
+      <rect x="350" y="370" width="240" height="150" rx="10" fill="#f8fafc" stroke="#10b981" stroke-width="2"/>
+      <text x="470" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#10b981">
+        Data Processing
+      </text>
+      <text x="470" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • JSON Data Structure
+      </text>
+      <text x="470" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Pandas
+      </text>
+      <text x="470" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • NumPy
+      </text>
+      <text x="470" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Data Preprocessing
+      </text>
+    </g>
+    
+    <!-- Machine Learning -->
+    <g id="tech-ml">
+      <rect x="620" y="370" width="240" height="150" rx="10" fill="#f8fafc" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="740" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#8b5cf6">
+        Machine Learning
+      </text>
+      <text x="740" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • T5 (Q&A Model)
+      </text>
+      <text x="740" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • BERT (Sentiment Analysis)
+      </text>
+      <text x="740" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Hugging Face Transformers
+      </text>
+      <text x="740" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • PyTorch/TensorFlow
+      </text>
+    </g>
+    
+    <!-- Interface & Deployment -->
+    <g id="tech-interface">
+      <rect x="890" y="370" width="240" height="150" rx="10" fill="#f8fafc" stroke="#f59e0b" stroke-width="2"/>
+      <text x="1010" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f59e0b">
+        Interface & Deployment
+      </text>
+      <text x="1010" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Streamlit
+      </text>
+      <text x="1010" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Jupyter Notebook
+      </text>
+      <text x="1010" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • FastAPI 
+      </text>
+    </g>
+    
+    <!-- Additional Tools -->
+    <g id="tech-additional">
+      <rect x="200" y="550" width="800" height="120" rx="10" fill="#f8fafc" stroke="#6b7280" stroke-width="2"/>
+      <text x="600" y="580" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6b7280">
+        Outils Additionnels
+      </text>
+      <text x="300" y="610" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Git/GitHub pour le versioning
+      </text>
+      <text x="300" y="650" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • scikit-learn pour l'évaluation
+      </text>
+      <text x="700" y="650" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Requirements.txt pour les dépendances
+      </text>
+    </g>
+  </g>
+</svg>
