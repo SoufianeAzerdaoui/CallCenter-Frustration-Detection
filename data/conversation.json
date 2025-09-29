@@ -1,0 +1,85 @@
+
+[
+{
+  "client_id": "C002",
+  "profile": {
+    "name": "Mr. ADAND",
+    "history": [
+      "Fournisseur actuel : Electrabel",
+      "Type de contrat : Tarif fixe, compteur bihoraire",
+      "Double usage : professionnel + privé",
+      "Décompte annuel reçu habituellement début mai"
+    ],
+    "summary": "Client chez Electrabel avec un tarif fixe bihoraire, n’a pas encore reçu son décompte annuel pour cette année."
+  },
+  "conversation": [
+    {"speaker": "agent", "text": "Bonjour, je me présente, je suis le conseiller en énergie du cabinet..."},
+    {"speaker": "agent", "text": "Est-ce que votre fournisseur vous a informé par rapport aux augmentations ?"},
+    {"speaker": "client", "text": "Le fournisseur ? Qu’est-ce qu’il a fait ?"},
+    {"speaker": "agent", "text": "Vous êtes toujours chez le même fournisseur ?"},
+    {"speaker": "client", "text": "Oui, c’est le label."},
+    {"speaker": "agent", "text": "Depuis combien de temps ? Avez-vous eu une révision tarifaire ?"},
+    {"speaker": "client", "text": "Non, non, pas de révision."},
+    {"speaker": "agent", "text": "Vous avez un tarif social ?"},
+    {"speaker": "client", "text": "Non, non."},
+    {"speaker": "agent", "text": "Vous recevez votre décompte à quel moment ?"},
+    {"speaker": "client", "text": "Début mai."},
+    {"speaker": "agent", "text": "Est-ce qu’on peut vous rappeler à ce moment-là pour faire une révision ?"},
+    {"speaker": "client", "text": "Oui, pourquoi pas."},
+    {"speaker": "agent", "text": "Il y a eu une hausse de 10% depuis janvier."},
+    {"speaker": "client", "text": "On ne m’a pas contacté au début de l’année."},
+    {"speaker": "agent", "text": "On vous recontactera fin mai après réception du décompte."},
+    {"speaker": "client", "text": "D’accord."},
+    {"speaker": "agent", "text": "Le contrat est fixe ?"},
+    {"speaker": "client", "text": "Oui, c’est ça."},
+    {"speaker": "agent", "text": "Compteur bihoraire ?"},
+    {"speaker": "client", "text": "Oui."},
+    {"speaker": "agent", "text": "Montant mensuel approximatif ?"},
+    {"speaker": "client", "text": "Ça dépend, j’ai privé et professionnel ensemble."},
+    {"speaker": "agent", "text": "Très bien, je vous rappellerai au moment du décompte annuel."},
+    {"speaker": "client", "text": "Ok, très bien."}
+  ],
+  "label_emotion": "neutral", 
+  "summary": "Le conseiller propose une révision tarifaire au client suite à l’augmentation des prix de l’électricité et du gaz. Le client, resté chez Electrabel, n’a pas encore reçu son décompte annuel mais est ouvert à une prise de contact début/mi-mai.",
+  "suggestion": "Programmer un rappel mi-mai pour proposer une révision tarifaire personnalisée après réception du décompte annuel."
+},
+{
+  "client_id": "C003",
+  "profile": {
+    "name": "Mme (non spécifié)",
+    "history": [
+      "Fournisseur actuel : Enico",
+      "Type de contrat : Formule variable pour gaz et électricité",
+      "Ancien fournisseur : Lumineuse (factures très élevées)",
+      "Client frustrée par des changements tarifaires imprévus",
+      "Pas de connexion Internet fiable, préfère communication papier",
+      "Mari prend les décisions sur les contrats énergétiques"
+    ],
+    "summary": "Cliente chez Enico depuis plus d’un an, frustrée par les hausses imprévues des tarifs en formule variable. Ancienne expérience négative avec Lumineuse. Préfère ne pas changer de fournisseur sans l’avis de son mari. Connexion Internet instable."
+  },
+  "conversation": [
+    {"speaker": "agent", "text": "Bonjour Madame, nous vous appelons pour une révision de vos factures d’énergie..."},
+    {"speaker": "client", "text": "Je suis chez Enico depuis plus d’un an, je ne sais pas exactement."},
+    {"speaker": "agent", "text": "Avez-vous le gaz et l’électricité ?"},
+    {"speaker": "client", "text": "Oui, j’ai les deux."},
+    {"speaker": "agent", "text": "Combien payez-vous ?"},
+    {"speaker": "client", "text": "Ils m’ont remboursé 100€, mais maintenant je paye 260€. Avant c’était 200€."},
+    {"speaker": "agent", "text": "C’est sûrement lié à une formule variable."},
+    {"speaker": "client", "text": "Oui, mais j’ai été chez Lumineuse avant et j’ai payé plus de 1000€. J’ai un seul radiateur !"},
+    {"speaker": "agent", "text": "Vous êtes peut-être en tarif variable, c’est ce qui cause ces hausses."},
+    {"speaker": "client", "text": "Je ne veux plus changer, on finit toujours par payer plus. J’en ai marre de tout ça."},
+    {"speaker": "agent", "text": "Comprenez, avec un tarif fixe, vous seriez protégée pendant 1 an."},
+    {"speaker": "client", "text": "Peut-être. Mais j’ai déjà donné, maintenant j’attends que mon mari rentre."},
+    {"speaker": "agent", "text": "Pouvez-vous me lire votre consommation annuelle sur votre facture ?"},
+    {"speaker": "client", "text": "Je ne comprends rien à ces chiffres... Il y a 88, 10400, 400 kWh, etc."},
+    {"speaker": "client", "text": "J’ai une formule tri-variable pour le gaz, c’est ce qui est marqué."},
+    {"speaker": "agent", "text": "C’est bien ce que je disais, vous n’êtes pas protégée des hausses."},
+    {"speaker": "client", "text": "On est toujours arnaqués, j’en ai ras-le-bol, ça m’énerve !"},
+    {"speaker": "agent", "text": "D’accord. On peut vous rappeler quand votre mari est disponible ?"},
+    {"speaker": "client", "text": "Oui, je lui parlerai et je vous rappellerai si on est intéressé. Merci, au revoir."}
+  ],
+  "label_emotion": "frustrated",
+  "summary": "La cliente exprime une forte frustration due aux hausses imprévues en formule variable. Elle a vécu des expériences négatives avec d'autres fournisseurs comme Lumineuse. Préfère attendre son mari avant de prendre une décision.",
+  "suggestion": "Attendre le retour du mari pour proposer une offre à tarif fixe, avec une comparaison claire et une promesse sans engagement, de préférence par courrier papier."
+}
+]
